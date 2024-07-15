@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./App.css"; // 导入CSS文件
+import "./App.css";  
 import { Stage, Layer, Text, Image as KonvaImage, Transformer } from 'react-konva';
 import useImage from 'use-image';
 
@@ -78,8 +78,7 @@ const App = () => {
     setTexts([]);
     setSelectedId(null);
   };
-
-  // 使用 useImage 钩子加载图片
+ 
   const [loadedImage] = useImage(image, 'Anonymous');
 
   useEffect(() => {
@@ -103,8 +102,8 @@ const App = () => {
       const stage = stageRef.current.getStage();
       const imageWidth = stage.width();
       const imageHeight = stage.height();
-      const textWidth = 100; // 假设初始文本宽度
-      const textHeight = 24; // 假设初始文本高度
+      const textWidth = 100; 
+      const textHeight = 24;  
   
       const centerX = (imageWidth - textWidth) / 2;
       const centerY = (imageHeight - textHeight) / 2;
@@ -122,7 +121,7 @@ const App = () => {
 
   const handleSelect = (e) => {
     setSelectedId(e.target.id());
-    e.cancelBubble = true; // Prevent event propagation to Stage
+    e.cancelBubble = true; 
     console.log('Text selected:', e.target.id());
   };
 
@@ -143,7 +142,7 @@ const App = () => {
     console.log('Canvas saved as image.');
   };
 
-  // function from https://stackoverflow.com/a/15832662/512042
+    
   function downloadURI(uri, name) {
     const link = document.createElement('a');
     link.download = name;
