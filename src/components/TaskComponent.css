@@ -1,0 +1,53 @@
+.task-container {
+  width: 100%; /* 使用百分比宽度 */
+  height: 100%; /* 使用百分比高度 */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /* 确保padding不会增加外部尺寸 */
+}
+
+.task-image {
+  width: 100%; /* 图片宽度根据容器宽度调整 */
+  height: auto; /* 保持比例 */
+  max-width: 100%; /* 确保宽度不会超出容器 */
+  max-height: 100%; /* 确保高度不会超出容器 */
+  border-radius: 20px; /* 可选：增加圆角 */
+  margin-bottom: 10px;
+  align-self: center;
+}
+
+.task-description {
+  font-size: 16px;
+  line-height: 1.6; /* 增加行高，提高可读性 */
+  color: #333;
+  padding: 10px 0; /* 增加上下内边距，避免文本贴近容器边缘 */
+  text-align: left; /* 左对齐文本，使阅读更自然 */
+  word-wrap: break-word; /* 使长单词或URL自动换行 */
+  word-break: break-word; /* 对长单词或长URL进行强制换行 */
+  overflow-wrap: break-word; /* 确保内容在长单词处换行 */
+  white-space: normal; /* 确保内容按正常的空白处理 */
+  overflow-y: auto; /* 如果内容过长，允许垂直滚动 */
+}
+
+/* TaskComponent.css */
+
+.task-image {
+  display: block;
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1rem auto;
+  max-height: 50vh;
+
+}
+
+.task-container p {
+  color: #111;
+  line-height: 1.2;
+  margin: 0 0 .5rem 0;
+}
+
+.task-container p.highlighted {
+  background-color: rgb(255, 224, 128);
+  border-left: .25rem solid rgb(255, 192, 0);
+  padding: .5rem;
+}

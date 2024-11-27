@@ -1,0 +1,195 @@
+.chat-box {
+  width: 100%; /* 使用百分比宽度 */
+  height: 100%; /* 使用百分比高度 */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /* 确保padding不会增加外部尺寸 */
+}
+
+.chat-container {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #eeeeee;
+  border: thin solid #ddd;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.chat-message {
+  margin: 1rem;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-top: -.5rem;
+}
+
+.message-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+.message-content {
+  max-width: 80%;
+}
+
+.question {
+  color: var(--color-primary);
+}
+
+.answer-content {
+  color: #696969;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
+
+.message-row.question {
+  flex-direction: row-reverse;
+}
+
+.message-content {
+  width: calc(100% - 5rem);
+  background-color: #555;
+  color: #ffffff;
+  margin: .5rem 1rem;
+  padding: 0;
+  border-radius: 8px;
+  padding: .5rem;
+  position: relative;
+}
+
+
+.message-row.question .message-content {
+  background-color: var(--color-primary);
+}
+
+.message-row .message-content::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -.75rem;
+  top: 0;
+  background-color: transparent;
+  width: 0;
+  height: 0;
+  box-sizing: border-box;
+  border: none;
+  border-style: solid;
+  border-width: .75rem;
+  border-color: #555 #555 transparent transparent;
+}
+
+
+.message-row.question .message-content::before {
+  left: auto;
+  right: -.75rem;
+  border-color: var(--color-primary) transparent transparent var(--color-primary);
+}
+
+.message-content p {
+  margin: .5rem;
+}
+
+.input-container {
+  display: flex;
+  align-items: center; /* 确保输入框和按钮在垂直方向上居中对齐 */
+  margin-top: 10px;
+}
+
+.input-container input {
+  flex-grow: 1;
+  padding: 15px; /* 增大输入框的padding */
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px; /* 增大输入框字体大小 */
+  box-sizing: border-box; /* 确保padding不会增加外部尺寸 */
+  height: 48px; /* 确保输入框和按钮高度一致 */
+  line-height: 1.5; /* 调整行高以确保内容居中 */
+}
+
+.input-container button {
+  padding: 15px 30px; /* 增大按钮的padding */
+  border: none;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* 增大按钮字体大小 */
+  height: 48px; /* 确保按钮和输入框高度一致 */
+  box-sizing: border-box; /* 确保padding不会增加外部尺寸 */
+}
+
+.input-container button:disabled {
+  background-color: #ccc;
+}
+
+.input-container button:hover:not(:disabled) {
+  background-color: var(--color-secondary);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-container input {
+  flex: 1;
+  border-radius: 5px;
+  padding: .5rem;
+  margin: 0;
+  border: thin solid #dddddd;
+  background-color: #efefef;
+}
+
+.error-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.error-content button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.error-content button:hover {
+  background-color: #0056b3;
+}

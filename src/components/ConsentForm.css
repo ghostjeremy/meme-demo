@@ -1,0 +1,10 @@
+.consent-form {
+  max-width: 48rem;
+  margin: 1rem auto;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

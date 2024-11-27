@@ -1,0 +1,52 @@
+.sorted-idea-list-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.sorted-idea-main {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #eeeeee;
+  border: thin solid #ddd;
+  border-radius: 4px;
+  margin: 1rem 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.sorted-idea-item {
+  background-color: #ffffff;
+  margin: .5rem;
+  padding: .5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: var(--box-shadow);
+  transition: box-shadow .2s ease-in-out;
+}
+
+.sorted-idea-item:hover {
+  box-shadow: var(--box-shadow-raised);
+}
+
+.sorted-idea-item:active {
+  box-shadow: none;
+}
+
+.sorted-idea-item:disabled {
+  opacity: .5;
+}
+
+.sorted-idea-item.selected {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.sorted-idea-item .sorted-idea-text {
+  flex: 1;
+}
+
+.sorted-idea-item input {
+  margin: .5rem;
+}

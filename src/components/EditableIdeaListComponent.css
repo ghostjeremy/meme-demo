@@ -1,0 +1,143 @@
+.editable-idea-list-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.idea-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.idea-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.idea-list::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.idea-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.idea-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.idea-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.idea-item span {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.like-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+
+.like-button:disabled {
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 5px;
+}
+
+.icon-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.icon-button img {
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+}
+
+.save-button,
+.cancel-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #218838;
+}
+
+.cancel-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #c82333;
+}
+
+.edit-button,
+.delete-button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #e0a800;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.idea-list-note {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1em;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}

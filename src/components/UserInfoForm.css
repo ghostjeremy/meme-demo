@@ -1,0 +1,47 @@
+/* UserInfoForm.css */
+
+.user-info-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.user-info-form div {
+  margin-bottom: 15px;
+}
+
+.user-info-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.user-info-form input,
+.user-info-form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.user-info-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-info-form button:hover {
+  background-color: #0056b3;
+}
+
+.user-info-form p {
+  margin-top: 15px;
+  text-align: center;
+  color: green;
+}

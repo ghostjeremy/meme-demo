@@ -1,0 +1,80 @@
+.idea-list-container {
+  width: 100%; /* 使用百分比宽度 */
+  height: 100%; /* 使用百分比高度 */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /* 确保padding不会增加外部尺寸 */
+}
+
+.idea-list {
+  flex: 1;
+  overflow-y: auto;
+  box-sizing: border-box;
+  margin: 1rem 0; /* 确保padding不会增加外部尺寸 */
+}
+
+.idea-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.idea-list::-webkit-scrollbar-track {
+  background: #ffffff; /* 设置与聊天框背景相同的颜色 */
+}
+
+.idea-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.idea-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.idea-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: .5rem;
+  margin-bottom: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.idea-item span {
+  flex-grow: 1;
+}
+
+.like-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.like-button:disabled {
+  opacity: .5;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.idea-save-button:hover {
+  background-color: #0056b3;
+}
+
+.idea-save-button:disabled {
+  background-color: #ddd;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.idea-list-note {
+  margin-top: 10px; /* 为注释和内容之间添加间隙 */
+  font-size: 1rem; /* 调整注释的字体大小 */
+  padding: .5rem; /* 为注释增加内边距 */
+   /* 为注释增加背景颜色，突出显示 */
+  border-radius: 5px; /* 为注释增加圆角边框 */
+}

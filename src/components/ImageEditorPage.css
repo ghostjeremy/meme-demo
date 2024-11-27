@@ -1,0 +1,179 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-footer {
+  background-color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  flex: 0 0 calc(5% - 10px); /* 占据高度的5%，减去间隙的一部分 */
+  margin-top: 0px; /* 与main-content之间的空隙 */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editbox {
+  flex: 1;
+  padding: 1rem;
+}
+
+.image-editors-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start; /* 保持顶部对齐 */
+  overflow-y: auto;
+  padding: 1rem;
+  max-width: 100vw;
+  scroll-snap-type: x proximity;
+}
+
+.image-editor-wrapper {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  flex: 0 1 calc(33.333% - 40px); /* 3 columns with a gap of 20px between each */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+/* ImageEditor 样式 */
+.image-editor-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.image-container {
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 100%; /* 设置为100%宽度 */
+  display: flex;
+  justify-content: center;
+}
+
+.text-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 居中对齐 */
+  gap: 10px;
+  width: 100%; /* 设置为100%宽度 */
+  padding: 10px; /* 增加内边距 */
+  box-sizing: border-box; /* 包括内边距在内的总宽度计算 */
+}
+
+.text-controls input[type="text"],
+.text-controls input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* 设置为100%宽度 */
+
+  box-sizing: border-box; /* 包括内边距在内的总宽度计算 */
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start; /* 左对齐 */
+  width: 100%; /* 设置为100%宽度 */
+  gap: 10px;
+  align-items: center; /* 垂直居中对齐 */
+}
+
+.font-size-container {
+  display: flex;
+  align-items: center; /* 水平排列并垂直居中对齐 */
+}
+
+.font-size-label {
+  margin-right: 5px; /* 增加标签和输入框之间的间距 */
+  white-space: nowrap; /* 防止文字换行 */
+}
+
+.text-controls button {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.text-controls button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.text-controls label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 左对齐 */
+}
+
+/* Idea description 样式 */
+.idea-container {
+  margin-bottom: 20px;
+}
+
+.idea-description {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Finish button 样式 */
+.finish-button {
+  padding: 15px 30px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.finish-button:hover {
+  background-color: #218838;
+}
+
+.finish-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* 编辑输入框样式 */
+.edit-input-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.edit-input {
+  padding: 8px;
+  font-size: 16px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+
+.function-description {
+  margin: 20px auto; /* 中心对齐并与header保持距离 */
+  padding: 20px;
+  background-color: #ffffff; /* 设置为白色背景，与内容部分区分 */
+  border-radius: 10px; /* 圆角 */
+  width: 90%; /* 宽度与下方image-editor保持一致 */
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 轻微阴影效果 */
+}
